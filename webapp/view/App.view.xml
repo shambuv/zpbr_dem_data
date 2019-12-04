@@ -14,7 +14,7 @@
 		<pages>
 			<Page id="page" showHeader="true" title="Demand Request Search">
 				<content>
-				<VBox fitContainer="true">
+				<VBox fitContainer="true"> 
 					<smartFilterBar:SmartFilterBar					      
 						id="idSmartFilterBar"
 						initialized="onInitialized"
