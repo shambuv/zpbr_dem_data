@@ -14,6 +14,7 @@
 		<pages>
 			<Page id="page" showHeader="true" title="Demand Request Search">
 				<content>
+				<VBox fitContainer="true">
 					<smartFilterBar:SmartFilterBar					      
 						id="idSmartFilterBar"
 						initialized="onInitialized"
@@ -22,7 +23,6 @@
 						entitySet="DemandDataSet"
 						persistencyKey="DDPersKeyFilter">
 					</smartFilterBar:SmartFilterBar>
-					
 					<smartTable:SmartTable 
 						id="idSmartTable"						
 						smartFilterId="idSmartFilterBar"
@@ -165,7 +165,7 @@
 						<FlexItemData growFactor="1" baseSize="auto"/>
 				       </smartTable:layoutData>
 					</smartTable:SmartTable>
-					
+				</VBox>	
 			    </content>
 			  </Page>
 			</pages>
