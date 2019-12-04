@@ -15,7 +15,6 @@
 		<pages>
 			<Page id="page" showHeader="true" title="Demand Request Search">
 				<content>
-					
 					<smartFilterBar:SmartFilterBar					      
 						id="idSmartFilterBar"
 						initialized="onInitialized"
