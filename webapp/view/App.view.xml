@@ -10,7 +10,6 @@
 	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	displayBlock="true"
 	height="100%">
-	
 	<App id="app">
 		<pages>
 			<Page id="page" showHeader="true" title="Demand Request Search">
