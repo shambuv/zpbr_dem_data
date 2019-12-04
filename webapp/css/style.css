@@ -1,0 +1,53 @@
+/* Enter your custom styles here */
+
+
+.sapUiTableTr.sapUiTableRowSel:not(.sapUiTableGroupHeader)>td:not(.sapUiTableTDDummy) {
+    background-color: #85fd9d !important;
+}
+
+.sapMIBar-CTX .sapMTitle {
+    color: #ffffff !important;
+}
+
+.sapMIBar.sapMHeader-CTX {
+    background-color: green !important;
+}
+
+.sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapMFlexItem.sapUiResponsiveContentPadding,
+.sapMFlexItem.sapUiResponsiveContentPadding {
+    padding: 0rem;
+}
+
+.sapUiIcon::before {
+    color: #76B900;
+}
+
+.sapMBtnBack,
+.sapMBtnTransparent {
+    color: #76B900;
+}
+
+span.sapMBtnInner.sapMBtnEmphasized {
+    background-color: #76B900;
+    border-color: #76B900;
+}
+
+.sapUiCompVarMngmt .sapUICompVarMngmtClickable {
+    color: #76B900 !important;
+}
+
+.sapMInputBaseReadonly .sapMInputBaseContentWrapper {
+    background: #e5e5e5;
+}
+
+.sapMSlt.sapMSltReadonly {
+    background: #e5e5e5;
+}
+
+
+/*
+.sapMLIBSelectS,
+.sapMLIBSelectM {
+    background: green !important;
+}
+*/
