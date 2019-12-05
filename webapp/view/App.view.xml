@@ -14,7 +14,8 @@
 		<pages>
 			<Page id="page" showHeader="true" title="Demand Request Search">
 				<content>
-				<VBox fitContainer="true"> 
+				<VBox fitContainer="true">
+					<Panel id="idPanel" expanded="true" expandable="true" width="auto" class="sapUiResponsiveMargin"> 
 					<smartFilterBar:SmartFilterBar					      
 						id="idSmartFilterBar"
 						initialized="onInitialized"
@@ -23,6 +24,7 @@
 						entitySet="DemandDataSet"
 						persistencyKey="DDPersKeyFilter">
 					</smartFilterBar:SmartFilterBar>
+					</Panel>
 					<smartTable:SmartTable 
 						id="idSmartTable"						
 						smartFilterId="idSmartFilterBar"

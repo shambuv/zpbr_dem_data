@@ -99,13 +99,17 @@ sap.ui.define([
 					
 					oModelHeader.setData(oData.results);
 					this.getView().setModel(oModelHeader, "oModelHeader");
+					this.getView().byId("idPanel").setExpanded(false);
 					sap.ui.core.BusyIndicator.hide();
-					var oSmartTable = this.getView().byId("idSmartTable");
-					if (oSmartTable) {
-							var oPage = this.getView().getContent()[0].getAggregation("pages")[0];
-							oPage.scrollToElement(oSmartTable, 1000);
-						}		
-
+					//var oSmartTable = this.getView().byId("idSmartTable");
+					//if (oSmartTable) {
+							//var oPage = this.getView().getContent()[0].getAggregation("pages")[0];
+							//oPage.scrollToElement(oSmartTable, 1000);
+					//	}		
+					if(oData.results.length === 0){
+						sap.m.MessageToast.show("No Data Found");
+					}	
+					
 				}.bind(this),
 				error: function (oResponse) {
 					sap.m.MessageToast.show("OData call failed");
