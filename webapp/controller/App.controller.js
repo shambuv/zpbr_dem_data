@@ -30,6 +30,13 @@ sap.ui.define([
 			var oTable = this.getView().byId("idSmartTable").getTable();
 			oTable.setGroupBy("");
 		},			
+		onExpand: function(oEvent){
+			 var oSmartTable = this.getView().byId("idSmartTable");
+			if(oEvent.getSource().getProperty("expanded") === true)
+			 oSmartTable.setVisible(false);
+			else oSmartTable.setVisible(true);
+			
+		},
 		onSearch: function(oEvent){
 			var oFilterData = oEvent.getSource().getFilterData();
 			for (var property in oFilterData) {
@@ -99,7 +106,11 @@ sap.ui.define([
 					
 					oModelHeader.setData(oData.results);
 					this.getView().setModel(oModelHeader, "oModelHeader");
+					
 					this.getView().byId("idPanel").setExpanded(false);
+					var oSmartTable = this.getView().byId("idSmartTable");
+					if(oData.results.length > 0) oSmartTable.setVisible(true);
+					else oSmartTable.setVisible(false);
 					sap.ui.core.BusyIndicator.hide();
 					//var oSmartTable = this.getView().byId("idSmartTable");
 					//if (oSmartTable) {

@@ -15,7 +15,7 @@
 			<Page id="page" showHeader="true" title="Demand Request Search">
 				<content>
 				<VBox fitContainer="true">
-					<Panel id="idPanel" expanded="true" expandable="true" width="auto" > 
+					<Panel id="idPanel" headerText="Search Criteria" expanded="true" expandable="true" width="auto" expand="onExpand"> 
 					<smartFilterBar:SmartFilterBar					      
 						id="idSmartFilterBar"
 						initialized="onInitialized"
@@ -26,6 +26,7 @@
 					</smartFilterBar:SmartFilterBar>
 					</Panel>
 					<smartTable:SmartTable 
+					    visible="false"
 						id="idSmartTable"						
 						smartFilterId="idSmartFilterBar"
 						class="sapUiResponsiveContentPadding sapUiSizeCompact"
