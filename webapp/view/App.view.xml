@@ -15,16 +15,15 @@
 			<Page id="page" showHeader="true" title="Demand Request Search">
 				<content>
 				<VBox fitContainer="true">
-					<Panel id="idPanel" headerText="Search Criteria" expanded="true" expandable="true" width="auto" expand="onExpand"> 
 					<smartFilterBar:SmartFilterBar					      
 						id="idSmartFilterBar"
 						initialized="onInitialized"
 						search="onSearch"		
 						class="sapUiResponsiveContentPadding sapUiSizeCompact"
 						entitySet="DemandDataSet"
+						assignedFiltersChanged="filterChanged"
 						persistencyKey="DDPersKeyFilter">
 					</smartFilterBar:SmartFilterBar>
-					</Panel>
 					<smartTable:SmartTable 
 					    visible="false"
 						id="idSmartTable"						
@@ -159,6 +158,8 @@
 							<ToolbarSpacer/>
 							<ToolbarSeparator/>
 							<OverflowToolbarButton id="btnUnGroup" icon="sap-icon://collapse-group" press="onUnGroup" tooltip="Remove Group By" type="Accept"
+								visible="false"/>
+							<OverflowToolbarButton id="btnShowFilter" icon="sap-icon://add-filter" press="showFilter" tooltip="Show Selection" type="Accept"
 								visible="false"/>
 							<OverflowToolbarButton id="btnXcl" icon="sap-icon://excel-attachment" press="onDownload" tooltip="Download to Excel" type="Accept"
 								visible="true"/>										
